@@ -385,7 +385,7 @@
 				<h2>В интерьере</h2>
 			</div>
 		</div>
-		<div class="row hidden-xs">
+		<div class="row">
 				<div class="col-xs-12">
 						<div class=" slider-decor">
 								<img src="img/foto/4.png" alt="">
@@ -395,15 +395,6 @@
 					</div>
 				</div>
 			</div>
-		<div class="container">
-			<div class="row  visible-xs-block">
-				<div class="col-xs-12 slider-decor-adaptiv">
-						<img src="img/foto/4.png" alt="">
-						<img src="img/foto/5.png" alt="">
-						<img src="img/foto/4.png" alt="">
-				</div>
-		</div>
-		</div>
 		
 
 		<div class="padding-none">
@@ -1065,24 +1056,26 @@
 		});
 	</script>
 	<script>
+	$(document).ready(function(){
 		$('.slider-decor').slick({
 		  infinite: true,
 		  slidesToShow: 2,
 		  slidesToScroll: 1,
 		  arrows: true,
           nextArrow: '<i class="fa feedback-slider-arrows arrow-right  fa-angle-right fa-3x"></i>',
-          prevArrow: '<i class="fa feedback-slider-arrows arrow-left  fa-angle-left  fa-3x"></i>'
-		});
-	</script>
-	<script>
-		$('.slider-decor-adaptiv').slick({
-		  infinite: true,
-		  slidesToShow: 1,
-		  slidesToScroll: 1,
-		  arrows: true,
-          nextArrow: '<i class="fa feedback-slider-arrows arrow-right  fa-angle-right fa-3x"></i>',
-          prevArrow: '<i class="fa feedback-slider-arrows arrow-left  fa-angle-left  fa-3x"></i>'
-		});
+          prevArrow: '<i class="fa feedback-slider-arrows arrow-left  fa-angle-left  fa-3x"></i>',
+          responsive: [
+    
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+	});
+})
 	</script>
 </body>
 </html>
